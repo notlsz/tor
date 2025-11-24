@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1760718727778,
+      "tag": "0000_even_boomerang",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1763753803396,
+      "tag": "0001_minor_goliath",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1763758289508,
+      "tag": "0002_fuzzy_rafael_vega",
+      "breakpoints": true
+    }
+  ]
+}
