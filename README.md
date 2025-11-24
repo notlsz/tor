@@ -1,3 +1,38 @@
+Missing
+drizzle & src folder
+bun.lock
+middleware.ts:
+import { NextRequest, NextResponse } from "next/server";
+import { headers } from "next/headers";
+import { auth } from "@/lib/auth";
+ 
+export async function middleware(request: NextRequest) {
+	const session = await auth.api.getSession({
+		headers: await headers()
+	})
+ 
+	if(!session) {
+		return NextResponse.redirect(new URL("/sign-in", request.url));
+	}
+ 
+	return NextResponse.next();
+}
+ 
+export const config = {
+  runtime: "nodejs",
+  matcher: [
+    "/discover",
+    "/creators/:path*",
+    "/messages",
+    "/invites/:path*",
+    "/leaderboard",
+    "/onboarding",
+  ],
+};
+next.config.ts
+package-lock.json
+tsconfig.json
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
